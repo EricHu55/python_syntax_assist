@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../bubble.css">
+    <link rel="stylesheet" href="../../cell_layout.css">
+
+</head>
+<body>
+    <div class="table">
+        <p class="mid">Table of contents</p>
+        <a href="#input_1"><span data-tip="shows the basic datatypes for creating basic variables">User datatypes</span></a> <br>
+        <a href="#input_2"><span data-tip="shorthand creating multiple variables for user input">var1,var2,var(n) = list</span></a>
+    </div>
+    <div id="input_1" class="code">
+        <p class="mid">user input of different datatypes</p>
+        <img src="img/input_variations.jpg" height="50%">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 2: user input(default)</dt>
+                <dd>Allows user to input data during execution. The default datatype of input is string</dd>
+                <dd class="syntax">format: var = input("message ")</dd>
+                <dd class="layout">var = variable containing the input <br>
+                    message = this is the message that will be displayed before the input option</dd>
+            <dt>Line 5: user input (data type specific</dt>
+                <dd class="syntax"> format: var = dtype(input("message "))</dd>
+                <dd class="layout">dtype = this is type conversion at input</dd>
+                <dd>Allows user to enter an input where the datatype will be indicated at the beginning</dd>
+        </dl>
+    </details>
+
+    <div id="input_2" class="code">
+        <p class="mid">multiple user input shorthand method (unpacking)</p>
+        <img src="img/user_input_unpacking_method.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">user input unpacking: var1,var2,varn = map(datatype,input("message: ").split("delimiter"))</dt>
+                <dd class="layout">var1,var2,varn : These are the variables that are suppose to store the inputs <br>
+                    map : This ensures that the following function is applied to each value or variable in this case <br>
+                    datatype: this converts the input to the desired datatype as input default datatype is string <br>
+                    input : Allows the user to enter a value during the code execution <br>
+                    .split() : This method divides a string based on the entered delimiter. The default delimiter is by whitespace <br>
+                    delimiter : This determines where the code will split the string. If no value is entered .split will divide the string by whitespace</dd>
+            <dt>Lines 2-4: basic input</dt>
+                <dd>This is the normal way to enter using inputs for variables</dd>
+            <dt>Line 7: multiple user input shorthand</dt>
+                <dd>This allows the user to enter inputs for multiple variables at once</dd>
+            <dt>Rules:
+                <dd class="extra">1) The datatype for the inputs all have to be the same <br>
+                    2) The number of inputs must match the number of variables</dd>
+            </dt>
+        </dl>
+    </details>
+    <details class="info">
+        <summary class="nested">Rules and info</summary>
+        <dl>
+            <dt>Rules</dt>
+                <dd>1) The number of variables should match the number of input values</dd>
+            <dt></dt>
+        </dl>
+    </details>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../bubble.css">
+    <link rel="stylesheet" href="../../cell_layout.css">
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+    </style>
+</head>
+<body>
+    <div class="table">
+        <ul>
+            <li><a href="#var_1"><span data-tip="Creating and assigning an element to a variable">var_name = element</span></a></li>
+            <li><a href="#var_2"><span data-tip="Series of basic datatypes commonly used for variables">Basic datatypes</span></a></li>
+            <li><a href="#var_3"><span data-tip="Temporarily changing the datatype of a variable without creating a new one">datatype(variable)</span></a></li>
+            <li><a href="#var_4"><span data-tip="A copy is an image of the targeted variable while a pointer is mirror of the targetted variable">pointer vs copy</span></a></li>
+            <li><a href="#var_5"><span data-tip="shorthand for assigning elements to multiple variables where the element quantity = variable quantity">var1,var2 = list[a,b]</span></a></li>
+        </ul>
+        
+    </div>
+<!--creation, altering, execution-->
+    <div id="var_1" class="code">
+        <p class="mid">create variable and element assignment</p>
+        <img src="img/variable_create_update.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">Code breakdown</summary>
+        <dl>
+            <dt class="syntax">Format: variable = value</dt>
+            <dt>Line 1: variable create</dt>
+                <dd>Creates a variable and value 5 is assigned to variable</dd>
+            <dt>Line 3: variable update</dt>
+                <dd>Because variable already exists system will overwrite variable with string abc</dd>
+            <dt>Line 2,4: output</dt>
+                <dd>The print statement will put things into display</dd>
+        </dl>
+    </details>
+<!--datatype variations-->
+    <div id="var_2" class="code">
+        <p class="">datatypes</p>
+        <img src="img/basic_datatypes.jpg" height="50%">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code output + breakdown</summary>
+        <dl>
+            <dt>Lines 1,3,5,7,9 : variable creation</dt>
+                <dd class="syntax">format: variable_name = value</dd>
+                <dd>creates a variable name to store data for easy access in future coding</dd>
+            <dt>Lines 2,4,6,8,20: check datatype</dt>
+                <dd class="syntax">format: datatype(variable)</dd>
+                <dd>Checks the datatype stored in the variable</dd>
+            <dt>Lines 11-16: Multi string output</dt>
+                <dd>able to print in multiple lines </dd>
+            <dt>advanced string format</dt>
+                <dd class="syntax">format: print(f"string {variable}")</dd>
+                <dd> \n : enters into a new line</dd>
+        </dl>
+    </details>
+<!--type conversion-->
+    <div id="var_3" class="code">
+        <p class="mid">Type conversion / type casting</p>
+        <img src="img/type conversion_casting.jpg" height="50%">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 1,2: initiate and check datatype</dt>
+            <dt>Line 5: type conversion</dt>
+                <dd class="syntax">format: type(variable)</dd>
+                <dd class="layout">type : datatype to convert to</dd>
+                <dd>convert the datatype of the variable and store into a variable. Type conversion is only
+                    temporary and will not affect the original datatype of the variable initiated to
+                </dd>
+        </dl>
+    </details>
+    <details class="info">
+        <summary class="nested">Notes and Rules</summary>
+        <dl>
+            <dt>Note: </dt>
+                <dd>1) The type conversion will only last for one action before it is terminated <br>
+                    2) The conversion is only temporary if not stored into another variable<br>
+                    3) The type conversion will not affect the original variable (unless it is stored back to itself)</dd>
+            <dt></dt>
+        </dl>
+    </details>
+    <1></1>
+<!--pointer vs copy-->
+    <div id="var_4" class="code">
+        <p class="mid">Pointer vs Copy</p>
+        <img src="img/variable assignment pointer vs copy.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note"></summary>
+        <dl>
+            <dt>Line 3: copy list</dt>
+                <dd>Iterates through the list and only copies the elements into the new variable</dd>
+                <dd class="extra">A copied list shares the same information but is located in a seperate memory location.
+                    This allows the copied list to be altered without affecting the original list</dd>
+            <dt>Line 9: referenced list</dt>
+                <dd>Creates a reference to the original list</dd>
+                <dd class="extra">A referenced list shares the same memory location as the original list. This means that
+                    any changes made to the referenced list will affect the original list</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary style="background-color:green;">reference vs copy</summary>
+            <dl>
+                <dt>reference variable</dt>
+                    <dd> 1) contains same information <br>
+                        2) shares the same memory location i.e one location two names <br>
+                        3) Changes to reference will affect original</dd>
+                <dt> copied variable</dt>
+                    <dd> 1) contains same information <br>
+                        2) stored in a different memory location compared to the original <br>
+                        ___i.e: two names, two seperate memory locations <br>
+                        3)Changes to the copy will not affect he original 
+            </dl>
+    </details>
+<!--unpacking-->
+    <div id="var_5" class="code">
+        <p class="mid">unpacking list/tuple elements</p>
+        <img src="img/unpacking.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: correct unpacking (left img)</summary>
+        <dl>
+            <dt class="syntax">unpacking list/tuple : variables = list/tup_var</dt>
+                <dd class="layout"> variables : a set of variables to store each element of the list/tuple <br>
+                    list/tup_var : variable that contains the list or tuple</dd>
+            <dt>Line 2: create tuple</dt>
+            <dt>Lines 4-8: assigning elements</dt>
+                <dd>This is the regular way to assign elements of a list/tuple to variables for easier future uses</dd>
+            <dt>Line 10: unpacking elements</dt>
+                <dd>This is the shorthand for assigning elements to variables</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: Incorrect unpacking (right img)</summary>
+            <dl>Lines 4-7: unpacking</dl>
+                <dd>The number of assigned varianles does not match the number of elements</dd>
+            <dl> Error</dl>
+                <dd class="extra"> when unpacking, the number of assigned variables must match
+                        the number of elements in the list or tuple else an error will occur. This
+                        method works for both tuples and lists
+                </dd>
+    </details>
+    <details class="note">
+        <summary class="nested">notes and Rules</summary>
+        <dl>
+            <dt>Rules:</dt>
+                <dd>1) The number of variables must match the number of elements in the list</dd>
+            <dt></dt>
+        </dl>
+    </details>
+</body>
