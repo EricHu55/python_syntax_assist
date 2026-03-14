@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../bubble.css">
+    <link rel="stylesheet" href="../../cell_layout.css">
+
+    </style>
+</head>
+<body>
+    <div class="table">
+        <p class="mid">Table of contents</p>
+        <a href="#dict_1"><span data-tip=" ->create a dictionary">name = { }</span></a> <br>
+        <a href="#dict_2"><span data-tip=" ->Retrieve the value of a key">dictionary.get(key_name)</span></a> <br>
+        <a href="#dict_3"><span data-tip=" ->updating an existing key with a new value">dictionary[key] = new_value</span></a><br>
+        <a href="#dict_3"><span data-tip=" ->creating a new key value pair during runtime">dictionary[new_key] = value</span></a><br>
+        <details>
+            <summary><a href="#dict_4">itteration of keys / values / key : value pairs</a></summary>
+                <dl>
+                    <dt><span data-tip=" ->display all keys only in a dictionary">dictionary.keys()</span></dt>
+                    <dt><span data-tip=" ->disp;ay all values only in a dictionary">dictionary.values()</span></dt>
+                    <dt><span data-tip=" ->display all key and values in pairs in a dictionary">dictionary.items()</span></dt>
+                </dl>
+        </details>
+        <a href="#dict_5"><span data-tip=" ->remove a key : value pair in a dictionary during runtime">dictionary.pop(key)</span></a><br>
+        <a href="#dict_6"><span data-tip=" ->delete all key: value pairs in a dictionary">dictionary.clear()</span></a><br>
+        <details>
+            <summary><a href="#dict_7"><span data-tip=" ->Access each key or value independently">Itterate key/values</span></a></summary>
+                <dl>
+                    <dt><span data-tip=" ->iterate through keys only">for key in dictionary.keys()</span></dt>
+                    <dt><span data-tip=" ->iterate through values only">for value in dictionary.values():</span></dt>
+                    <dt><span data-tip=" ->iterate through key : value pairs">for key,value in datatype.items():</span></dt>
+                </dl>
+        </details>
+        <a href="#dict_8"><span data-tip=" ->create a dictionary using zip and dic constructor">variable = dict(zip(tuple,iterable))</a><br>
+        <a href="#dict_9"><span data-tip=" ->create dictionary with a default none type">variable = dict.fromkeys(tuple)</span></a> <br>
+        <a href="#dict_10"><span data-tip=" ->Retrieve key value pair if exists, else it will create a new pair(cannot change value through this method">variable = dictionary.setdefault(key,value)</span></a> <br>
+        <a href="#dict_11"><span data-tip=" Merge the second dictionary with the first dictionary">dictionary.update(dictionary 2)</span></a> <br>
+        <details>
+            <summary><a href="#dict_12">creating a copy of a dictionary</a> <br></summary>
+                <dl>
+                    <dt><span data-tip="->creates a copy and inherits changes to values">dictionary.copy()</span></dt>
+                    <dt><span data-tip="->creates an isolated copy of the original dictionary">copy.deepcopy(dictionary)</span></dt>
+                </dl>
+        </details>
+        <details>
+            <summary><a href="#dict_14"><span data-tip="Looping through the dictionary where the user is in full control">converts the dictionary into a manual itterable</span></a></summary>
+            <dl>
+                <dt><span data-tip="convert dictionary keys to manual itterable">variable = iter(dictionary)</span></dt>
+                <dt><span data-tip="convert dictionary values to manual itterable">variable = iter(dictionary.values())</span></dt>
+                <dt><span data-tip="convert dictionary pairs to manual itterable">variable = iter(dictionary.items())</span></dt>
+                <dt><span data-tip="itterate through the keys/values/pairs">next(dict/dict.values()/dict.items())</span></dt>
+            </dl>
+        </details>
+        <details>
+            <summary><a href="#dict_15">sorting dictionary</a></summary>
+            <dl>
+                <dt><span data-tip="-> sorting dictionary keys">variable = sorted(dictionary)</span></dt>
+                <dt><span data-tip="-> sorting dictionary values">variable = sorted(dictionary.values())</span></dt>
+                <dt><span data-tip="-> sorting dictionary pairs">variable = sorted(dictionary.items())</span></dt>
+            </dl>
+        </details>
+        <a href="#dict_16">check if key in dictionary</a>
+    </div>
+
+
+
+
+
+
+<!--create dictionary-->
+    <div id="dict_1" class="code">
+        <p class="mid">create dictionaries</p>
+        <img src="img/create dictionary.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: create dictionary correctly (left img)</summary>
+        <dl>
+            <dt lass="synatx">create dictionary format : dic_var ={key:value}</dt>
+                <dd class="layout">dic_var : Variable that contains the dictionary <br>
+                    key : The key in the dictionary, used for locating entries <br>
+                    value : The value of each key <br>
+                    {:} : The brackets represents a dictioary and the colon is the seperator of the key and value</dd>
+            <dt>Line 2: Create dictionary</dt>
+            <dt>Lines 3-6 : Key:value pairs</dt>
+                <dd>These are the key and values of eact set in the dictionary</dd>
+            <dt>Line 9: Output dictionary</dt>
+            <dt>Rules
+                <dd class="extra">1)Dictionaries can contain mixed datatypes <br>
+                    2)Each key should be unique but there can be duplicate values
+                    3)Most key types should be string for input purposes</dd>
+            </dt>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">incorrect dictionary creation (right img)</summary>
+        If there are duplicates of a key, the latest key would be kept while the earlier versions would be 
+        removed
+    </details>
+<!--Retrieve value by key-->
+    <div id="dict_2" class="code">
+        <p class="mid">Access individual values</p>
+        <img src="img/access_individual_values.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">dic_var.get(key)</dt>
+                <dd class="layout">dic_var : variable that contains the dictionary <br>
+                    .get() : Method to retrieve the value of the indicated key</dd>
+            <dt>Line 2: Create dictionary</dt>
+            <dt>Lines 3-7: key value pairs </dt>
+                <dd>These are the key and value pairs of a dictionary</dd>
+            <dt>Line 9: Key input</dt>
+                <dd>user input key name</dd>
+            <dt>Line 11: Retrieve value</dt>
+                <dd>Retriee the value of the indicated key</dd>
+            <dt>Results:</dt>
+                <dd class="extra">If the key does not exist the system will return a none statement, which 
+                    defines that the value does not exist
+                </dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">get value with defaulting value (far right img)</summary>
+        <dl>
+            <dt class="syntax">get value with defaulting message : dic_var.get(key,default message)</dt>
+                <dd class="layout">dic_var : variable that contains the dictionary to search <br>
+                    .get() : Method to retrieve value based on key input <br>
+                    key : The key to search 
+                    default message: This is the message that will display if no key exists</dd>
+        </dl>
+    </details>
+<!--update value and create new key value pair-->
+    <div id="dict_3" class="code">
+        <p class="mid">updating values and creating new key value sets</p>
+        <img src="img/update_create_key_value_set.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">update value or create key:value : dic_var[key] = value</dt>
+                <dd class="layout">dic_var : variable that contains the disctionary <br>
+                    key: The key in which a user wants to target <br>
+                    value: The new input value assigned to the key</dd>
+            <dt>Line 2: create dictionary</dt>
+            <dt>Line 3-7 : Key value pairs</dt>
+                <dd>These are the key and value pairs that are in the dictionary</dd>
+            <dt>Lines 10,15,20: Output all key value pairs in dictionary</dt>
+                <dd>Line 10: These are the original key:value pairs upon initialization <br>
+                    Line 15: These are the key value pairs after one of the keys have been updated (yellow underline) <br>
+                    Line 20: These are the new key value pairs after a new set have been added to the dictionary (yellow underline)</dd>
+            <dt>Lines 12,17: Enter key input</dt>
+                <dd>Line 12: This key input is for targeting a key to update, which means this key already exists in the dictionary <br>
+                    Line 17: This key input it to add a new key, which means this key originally does not exist in the dictionary</dd>
+            <dt>Line 13,18 : value input</dt>
+                <dd>Line 13: This value input is the new input that is to be stored into an existing key <br>
+                    Line 18: This value input is to be stored into a newly created key</dd>
+            <dt>Extra:
+                <dd class="extra">1)Updating a key and creating a new key:value set uses the same syntax <br>
+                    2)You can only update the value of a key:value set, the key cannot be changed unless it is removed and create
+                    a new set</dd>
+            </dt>    
+        </dl>
+    </details>
+<!--display all keys and values-->
+    <div id="dict_4" class="code">
+        <p class="mid">displaying all keys, values, or key:value pairs</p>
+        <img src="img/Output_all_keys_values_or_sets.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax"> Output all keys only: dic_var.keys() <br>
+                output all values only : dic_var.values() <br>
+                output all key:value sets in pairings : dic_var.items()</dt>
+                <dd class="layout"> dic_var : variable that contains the dictionary <br>
+                    .keys() : method to access all keys in the dictionary <br>
+                    .values() : Method to access all values in a dictionary <br>
+                    .items() : Method to access all key:value sets and maintains their pairing structure</dd>
+            <dt>Line 2 : Create dictionary</dt>
+            <dt>Lines 3-7: key : value pairings</dt>
+                <dd>These are the key and value pairs of the dictionary</dd>
+            <dt>Line 10: output keys</dt>
+                <dd>Only displays the keys of the dictionary in the order that they are created</dd>
+            <dt>Line 11: output values</dt>
+                <dd>Only displays the values of the dictionary in the order that they were created</dd>
+            <dt>Line 12: Output key:value pairs</dt>
+                <dd>Displays all the key:value pairs in the way that they were created</dd>
+        </dl>
+    </details>
+<!--remove key:value pair-->
+    <div id="dict_5" class="code">
+        <p class="mid">Removing a key:value pair from dictionary</p>
+        <img src="img/dic_remove_pairs.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">remove entry method 1: dic_var.pop(key) <br>
+                remove entry method 2: del dic_var[key]</dt>
+                <dd class="layout">dic_var : variable that contains the dictionary <br>
+                    .pop : method to remove a key value pair from a dictionary <br>
+                    del : Method to delete something <br>
+                    key : The key to locate and delete pair from the dictionary</dd>
+            <dt>Line 2 : create dictionary</dt>
+            <dt>Lines 3-7 : Key value pairs</dt>
+                <dd>These are the key value pairs stored in the dictionary</dd>
+            <dt>Lines 12,16 : The two methods to remove a key:value pair</dt>
+            <dt>Note:
+                <dd class="extra">Entering an incorrect key will result to an error, so its best to check
+                    to make sure the key exists before attempting to remove the pair
+                </dd>
+            </dt>
+        </dl>
+    </details>
+<!--Delete dictionary-->
+    <div id="dict_6" class="code">
+        <p class="mid">delete an entire dictionary</p>
+        <img src="img/delete_dictionary.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 2: Create dictionary</dt>
+            <dt>Lines 3-7: Key value pairs</dt>
+                <dd>These are the key value pairs of the dictionary</dd>
+            <dt>Line 11: delete dictionary</dt>
+                <dd>This clears out all the entries in the dictionary leaving it blank</dd>
+        </dl>
+    </details>
+<!--Itterate through key/values-->
+    <div id="dict_7" class="code">
+        <p class="mid">itterate through keys/values/key:value pairs individually</p>
+        <img src="img/dic_key_value_itterations.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: Access keys only (top left img)</summary>
+        <dl>
+            <dt class="syntax">Access all keys: for var in dic_var.keys()</dt>
+                <dd class="layout">for var in : for loop used to itterate all the keys in the dictionary individually <br>
+                    __var : This is a variable used to store the current key being accessed in he dictionary <br>
+                    dic_var.keys() : This function is used to access all keys in the dictionary
+                    </dd>
+            <dt>Line 2: Create dictionary</dt>
+            <dt>lines 3-7: key value pairs</dt>
+                <dd>These are the key value pairs of the dictionary</dd>
+            <dt>Line 11: key itteration</dt>
+                <dd>Access all the keys using the dic_var.keys() method then use a for in loop
+                    to itterate through each and every key</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: Access only values (top right img)</summary>
+        <dl>
+            <dt class="syntax">Access all keys: for var in dic_var.values()</dt>
+                <dd class="layout">for var in : for loop used to itterate all the values in the dictionary individually <br>
+                    __var : This is a variable used to store the current value being accessed in he dictionary <br>
+                    dic_var.values() : This function is used to access all values in the dictionary
+                    </dd>
+            <dt>Line 2: Create dictionary</dt>
+            <dt>lines 3-7: key value pairs</dt>
+                <dd>These are the key value pairs of the dictionary</dd>
+            <dt>Line 11: value itteration</dt>
+                <dd>Access all the values using the dic_var.values() method then use a for in loop
+                    to itterate through each and every value</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">Access all key and value pairs(bottom img)</summary>
+        <dl>
+            <dt class="syntax">Access all keys: for var1,var2 in dic_var.items()</dt>
+                <dd class="layout">for var1,var2 in : for loop used to itterate all the keys in the dictionary individually <br>
+                    __var1,var2 : .items() method access both key and value of the dictionary, therefore two variables
+                        are called. <br>
+                    ______var1 : variable used to hold the key being accessed <br>
+                    ______var2 : variable used to hold the value being accessed
+                    dic_var.items() : This function is used to access all keys and values in the dictionary
+                    </dd>
+            <dt>Line 2: Create dictionary</dt>
+            <dt>lines 3-7: key value pairs</dt>
+                <dd>These are the key value pairs of the dictionary</dd>
+            <dt>Line 11: key itteration</dt>
+                <dd>Access all the keys and values using the dic_var.items() method then use a for in loop
+                    to itterate through each and every key value pair</dd>
+        </dl>
+    </details>
+    <!--create dictionary Key:value by zip-->
+    <div id="dict_8" class="code">
+        <p class="mid">create dictionary with zip</p>
+        <img src="img/create_dict_through_zip.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">var = dict(zip(list1,list2))</dt>
+                <dd class="layout">var : variable that will store the dictionary <br>
+                    dict : constructor that defines the current set as a dictionary (datatype conversion) <br>
+                    zip : links up the indicated lists together (links up by index) <br>
+                    __The zip function will return a zip datatype <br>
+                    list1, listn : the lists that would be used to create the dictionary</dd>
+            <dt>Line 1: Import random library</dt>
+            <dt>Line 3: Create tuple</dt>
+                <dd>These values would represent the keys of the dictionary</dd>
+            <dt>Line 4: Create list</dt>
+                <dd>A blank list to store the elements that represents the values of the dictionary</dd>
+            <dt>Lines 5-7: Iteration loop</dt>
+                <dd>Loop to generate random numbers for the values of the list <br>
+                    __Line 6: Using the random library to generate a series of random values between 1-15</dd>
+            <dt>Line 10: Create a dictionary using the zip function (first element is the keys, second element is the values)</dt>
+            <dt>Line 11: print all the key : value pairs</dt>
+        </dl>   
+    </details>
+<!--create dictionary with default none type-->
+    <div id="dict_9" class="code">
+        <p class="mid">create dictionary with default none type</p>
+        <img src="img/create_dict_with_fromkeys.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 1: import library</dt>
+            <dt>Line 3: create tuple</dt>
+                <dd>This tuple will be used to fill in the keys for the dictionary</dd>
+            <dt>Line 4: empty list</dt>
+                <dd>This is to contain the elements that will represent the values of the dictionary</dd>
+            <dt>Lines 5 - 7 : loop to generate values</dt>
+                <dd>Line 6: Generate a random number between 1-15 and store into variable element</dd>
+                <dd>Line 7: Store the generated element into list quantity</dd>
+            <dt>Line 10: create dictionary with zip function</dt>
+            <dt class="syntax">var = dict.fromkeys(key,value)</dt>
+                <dd class="layout">var : variable that stores the dictionary <br>
+                    dict.fromkeys : dictionary function that allows to create a dictionary with none value <br>
+                    ____The none datatype acts as a place holder, by default creating a key with no value leaves the value blank <br>
+                    key : insert the key element <br>
+                    value : enter the value paired with the indicated key</dd>
+        </dl>
+    </details>
+<!--dictionary set default function-->
+    <div id="dict_10"class="code">
+        <p class="mid">dictionary with set default function</p>
+        <img src="img/dict_output_with_setdefault.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">var = dict.fromkeys(keys,values)</dt>
+                <dd class="layout">var : variable that contains the dictionaty <br>
+                    dict. : dictionary constructor to convert following elements into a dicitonary format <br>
+                    fromkeys() : method to set keys with a none value if no value is assigned to the key <br> 
+                    keys: variable that contains the keys for the dictionary <br> 
+                    values : variable that contains the values for the associated keys <br>
+                    __ The values can be excluded
+                </dd>
+            <dt>Line 2: Create list</dt>
+                <dd>This list would be used to create the values of the dictionary</dd>
+            <dt>Line 3: Create tuple</dt>
+                <dd>This tuple will be used to create the keys of the dictionary</dd>
+            <dt>Line 6: Create dictionary with zip function</dt>
+                <dd>Combines the tuple and list to create the dictionary</dd>
+            <dt>Line 11: setdefault with new key only</dt>
+                <dd>This would create a new key value pair where the value is a none type <br>
+                __This happens because the indicated key does not exit and a value was not provided</dd>
+            <dt>Line 16: setdefault with new key and value</dt>
+                <dd>This would create a new dictionary pair with the indicated key and value <br>
+                __This happens because the indicated key does not exist in the current dictionary</dd>
+            <dt>Line 21: setdefault with existing key and new value</dt>
+                <dd>This would return the existing key and value pair but no information was replaced</dd>
+            <dt>note:</dt>
+                <dd class="extra">1)If selected key exists, then it will output the key and item pair and value input would be ignored <br>
+                    2)If selected key does not exist, then selected key and selected value would be added to dictionary <br>
+                    3)If selectted key does not exist and no value is entered, then new key is created with none type as the value</dd>
+        </dl>
+    </details>
+<!--Update existing dictionary with another existing dictionary-->
+    <div id="dict_11" class="code">
+        <p class="mid">merge : update existing dictionary with another dictionary</p>
+        <img src="img/update_dict_with_another_existing_dict.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">update dictionary : dict1.update(dict2)</dt>
+                <dd class="layout">dict1 : The dictionary being updated <br>
+                    update : method to update a dictionary <br>
+                    dict2 : dictionary used to perform the updating</dd>
+            <dt>Line 2: import library</dt>
+            <dt>Line 4,8: Create tuples with defined values</dt>
+                <dd>These are the elements used to create the keys for the first and second dictionary</dd>
+            <dt>Lines 5,9: Create Dictionaries</dt>
+                <dd>Create two sets of dictionaries with keys but no values</dd>
+            <dt>Lines 12-13, 15-16: Fill in values</dt>
+                <dd>Loop through each dictionary and insert a value <br>
+                    Use a random generator to generate a random value within the indicated bounds</dd>
+            <dt>Lines 19 - 23: print values</dt>
+                <dd>Print pairs of each dictionary</dd>
+            <dt>Line 26: Merge dictionaries</dt>
+                <dd>Merge the second dictionary into the first dictionary</dd>
+            <dt></dt>
+            <dt> note:</dt>
+                    <dd class="extra">1)dict2 keys that exist in dict1 will override dict1's values <br>
+                        2)dict2 keys that don't exist in dict 1 keys will be migrated over <br>
+                        3)dict1 keys that don't exist in dict2 will remain the same <br>
+                        4)This action will save the changes to dict1 so a new dictionary will not be created</dd>
+        </dl>
+    </details>
+<!--copy and deep copy-->
+    <div id="dict_12" class="code">
+        <p class="mid">creating copy and deep copies</p>
+        <img src="img/dict_copy_deepcopy.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">
+            <dl>
+                <dt class="layout">dictionary copy: dict.copy() <br>
+                    dictionary deep copy: copy.deepcopy(dict)</dt>
+                    <dd class="layout">dict : name of the dictionary <br>
+                        .copy() : calling the function to create a shallow copy of the dictionary <br>
+                        deepcopy() : function to create a deep copy of the dictionary</dd>
+                <dt>Line 3-4: import libraries</dt>
+                <dt>Line 5: Create tuple</dt>
+                    <dd>Tuple used to create keys of a dictionary</dd>
+                <dt>Line 6: Create empty dictionary</dt>
+                    <dd>Dictionary only contains keys but no values</dd>
+                <dt>Lines 7-8 : Insert values</dt>
+                    <dd>Use a for loop to iterate each key and insert a randomly generated number <br>
+                    between the indicated bounds as the value for the key</dd>
+                <dt>Lines 11-12 : create copies</dt>
+                    <dd>These would be the copy and deep copy of the original dictionary</dd>
+                <dt>Lines 15-22 : print dictionaries</dt>
+                    <dd>Prints out the original, copy, and deepcopy of the dictionary</dd>
+                <dt>Line 25: new pair</dt>
+                    <dd>Create a new key key with "default" value into current dictionary</dd>
+                <dt>Lines 26-27: change values</dt>
+                    <dd>Iterates through the current existing dictionary and change the values of the dictionary</dd>
+                <dt>Lines 30-37: output dictionaries</dt>
+                    <dd>Prints out the original, copy, and deep copy. Purpose is to see how a copy and deep copy is affected</dd>
+                <dt> notes:</dt>
+                    <dd class="extra">1)creating dictionaries require to import the copy library <br>
+                        2) similarities between shallow and deep copy: <br>
+                            ___changes to original keys will not affect the copies <br>
+                            ___Newly added or removed key:value pairs will not affect the copies</dd>
+                        3) differences between copy and deep copy: <br>
+                            ___changes to the values of the original will affect the copy, but not the deep copy
+            </dl>
+        </summary>
+    </details>
+<!--Clear dicitonary-->
+    <div id="dict_13" class="code">
+        <p class="mid">clear dictionary pairs</p>
+        <img src="img/clear_dictionary.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">clear dictionary: dict.clear()</dt>
+                <dd class="layout">dict : name of the dictionary <br>
+                    clear() : function to remove all keys and values in the dictionary</dd>
+            <dt>Line 1: import library</dt>
+            <dt>Line 3: Create set</dt>
+                <dd>Set would be used to create the keys of a dictionary</dd>
+            <dt>Line 4: Create dictionary</dt>
+                <dd>Creates a dicitonary with keys but no values</dd>
+            <dt>Lines 7-8: Insert values</dt>
+                <dd>Iterate through dictioanry to access each key to insert a randomly generated number within bounds as the value</dd>
+            <dt>Line 15: clear dictionary</dt>
+                <dd>This deletes all the key value pairs but retains the dictionary making it a place holder</dd>
+    </details>
+<!--iter function of dictionary-->
+    <div id="dict_14" class="code">
+        <p class="mid"></p>manual iterator function: iter()</p>
+        <img src="img/dictionary_iter_function.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">create iterator: iter(iterable) <br>
+                iterate : next(iterable)</dt>
+                <dd class="layout"> iter : Function to convert an iterable to an iterator <br>
+                    iterable : a data structure that is iterable i.e. list, tuple, dictionary <br>
+                    next: function of iter to move to the next element in the iterable</dd>
+            <dt>Line 1: import library</dt>
+            <dt>Line 2: create tuple</dt>
+                <dd>Tuple will be used to create the keys of a dictionary</dd>
+            <dt>Line 4: Create dictionary</dt>
+                <dd>Creates a dictionary with keys but no values</dd>
+            <dt>Lines 7-8: insert values</dt>
+                <dd>loop through each key and inserts a random generated value within bounds as the value of accessed key</dd>
+            <dt>Line 11: itterable keys</dt>
+                <dd>Converts dictionary keys only into a manual itterable and store into a new variable</dd>
+            <dt>Line 12: iterable values</dt>
+                <dd>Converts dictionary values only into a manual itterable and store into a new variable</dd>
+            <dt>Line 13: iterable key value pairs</dt>
+                <dd>Converts the key value pairs into a manual itterable and store into a new variable</dd>
+            <dt>Lines 23-24: manually iterate through itterables</dt>
+                <dd>Using a for loop to manually iterate through each iterable (key, value, pairs) and print them out</dd>
+            <dt>note:</dt>
+                <dd class="extra">1) iter() and next() function is the basic blueprint for for and while loops <br>
+                    2) iter() allows the user to become in full control of going through an iterable <br>
+                    3) iter() can be best used when having to iterate through an iterable where the stopping condidition is not clear</dd>
+        </dl>
+    </details>
+<!--dictionary sorting-->
+    <div id="dict_15" class="code">
+        <p class="mid">sorting dictionaries</p>
+        <img src="img/dictionary_sorting.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 1: import library</dt>
+            <dt>Line 3: Create tuple</dt>
+                <dd>Tuple will be used to create a the keys of a dictionary</dd>
+            <dt>Line 4: Create dictionary</dt>
+                <dd>Using the tuple to create a dictionary with keys but no values</dd>
+            <dt>Line 7-8 : insert values</dt>
+                <dd>Loop through the dictionary to and insert a random gnerated value within bounds as the value to the accessed key</dd>
+            <dt>Lines 11-16: print sorted lists in descending order</dt>
+                <dd>Line 12: sort keys only and print </dd>
+        </dl>
+    </details>
+<!--check key exist in dictionary-->
+    <div id="dict_16" class="code">
+        <p class="mid">check if key in dicionary</p>
+        <img src="img/check_if_key_exist.jpg" height="200">
+    </div>
+</body>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../bubble.css">
+    <link rel="stylesheet" href="../../cell_layout.css">
+    <style>
+        /*.code : syntax frame
+        .note : summary highlight
+        .breakdown : detail frame
+        .syntax : general syntax frame
+        .layout : syntax description frame
+        .extra : standout notes
+        .mid : syntax frame heading
+        .info : rule frame
+        data-tip*/
+    </style>
+</head>
+<body>
+    <ul>
+        <li><details>
+            <summary><a href="#list_1">List creation and element access</a></summary>
+            <dl>
+                <dt><span data-tip="-> list_name=[ ]">Creating a list</span></dt>
+                <dt><span data-tip="list_name[index]">Access individual list element</span></dt>
+                <dt><span data-tip="list_name[start_index : end_index]">Access list elements consecutive range</span></dt>
+            </dl>
+            </details></li>
+        <li><a href="#list_2"><span data-tip="list_name[index] = new value">List element update</span></a></li>
+        <li><details>
+            <summary><a href="#list_3">create 2D list and access elements</a></summary>
+            <dl>
+                <dt><span data-tip="list_name = [ [list1],[list2]]">creating a 2D list</span></dt>
+                <dt><span data-tip="list_name[set index]">Access sub list</span></dt>
+                <dt><span data-tip="list_name[set_index][element_index]]">Access sub list element(s)</span></dt>
+            </dl>
+            </details></li>
+        <li><a href="#list_4"><span data-tip="list_name.append(value)">Add element to list end</span></a></li>
+        <li><details>
+            <summary><a href="#list_5">remove element(s) from list</a></summary>
+            <dl>
+                <dt><span data-tip="list_name.remove(element)">List remove single element</span></dt>
+                <dt><span data-tip="list_name.clear()">clear all list elements</span></dt>
+            </dl>
+            </details></li>
+        <li><a href="#list_6"><span data-tip="list_name.pop()">Retrieve then remove last list element</span></a></li>
+        <li><a href="#list_7"><span data-tip="list_name.index(value)">Return select list element index</span></a></li>
+        <li><details>
+            <summary><a href="#list_8">sorting lists</a></summary>
+            <dl>
+                <dt><span data-tip="list_name.sort()">sort list ascending order</span></dt>
+                <dt><span data-tip="list_name.reverse()">sort list descending order</span></dt>
+            </dl>
+            </details>
+        <li><a href="#list_9"><span data-tip="list_name.count(element)">Return select element frequency</span></a></li>
+        </ul>
+
+<!--List creation and access-->
+    <div id="list_1" class="code">
+        <p class="mid">Create List and access elements</p>
+        <img src="img/list_creation + access_element.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">Create List :list_var = [elements] <br>
+                access single element: list_var[index] <br>
+                access range of elements: list_var[start:end]
+                </dt>
+                <dd class="layout">list_var: name of the variable that contains the list <br>
+                    elements: the contents that are being stored in the list <br>
+                    start : index of the first element in the range (inclusive) <br>
+                    end : Last element in the range (exclusive)</dd>
+            <dt>Line 2: List creation</dt>
+                <dd>creates a list, which can store a series of elements into a single variable</dd>
+            <dt>Line 5: Access individual elements of list</dt>
+                <dd>Access a specific element from a list via the index</dd>
+            <dt>Lines 10,12,14: Access a range of elements</dt>
+                <dd>Line 10: Access a range of elements where the start anc end of the range are indicated</dd>
+                <dd>Line 12: Access a range of elements where the start is at default and end is indicated</dd>
+                <dd>Line 14: Access a range of elements where the start is indicated and the end is end of list</dd>
+            <dt>Notes:
+                <dd class="extra">1) A list can contain a mix of datatypes
+                    2) A list can be editted
+                    3) A blank list is created by leaving the section between the brackets blank
+                </dd>
+            </dt>
+        </dl>
+    </details>
+<!--Update elements-->
+    <div id="list_2" class="code">
+        <p class="mid">updating element</p>
+        <img src="img/list_update_element.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">update list: var_list[index] = new_value</dt>
+                <dd class="layout">var_list : name of the variable that stores the list <br>
+                    index : index value of where the targeted element is located<br>
+                    new_value : The new element that is to be used </dd>
+            <dt>Line 2: list initialiation</dt>
+                <dd>create a list</dd>
+            <dt>Line 8: update list</dt>
+                <dd>select the old element via index and indicate the new value to take its place</dd>
+        </dl>
+    </details>
+<!--2D list creation and access-->
+    <div id="#list_3" class="code">
+        <p class="mid">Create 2D list, access inner list set and inner list elements</p>
+        <img src="img/2D_List_creation + access_inner_elements.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: access inner list set (left set)</summary>
+        <dl>
+            <dt class="syntax">create 2D list: list_var = [ [inner_list 1], [inner_list n]] <br>
+                access inner list set: list_var[inner_list_index]</dt>
+                <dd class="layout">list_var : variable name that stores the 2D list <br>
+                __list_var[ [ ], [ ] ] : The outer bracket represents the outer list (list that contains all the inner list <br>
+                ____inner brackets: Each inner bracket represents individual inner lists seperated by commas<br>
+                inner_list_index : the index in which the inner list is located</dd>
+            <dt>Lines 3-7: 2D list creation
+                <dd>Constructs the 2D list</dd>
+            <dt>Lines 9-11: Access inner list sets</dt>
+                <dd>Access each inner list set</dd>
+            </dt>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: inner list access individual elements</summary>
+        <dl>
+            <dt class="syntax">access individual element: List_var[inner index set][inner_element[index]</dt>
+                <dd class="layout">inner_index_set: The index of the location of the inner list <br>
+                    inner_element_index: index of the location of the inner element</dd>
+            <dt>Line 9-11 : retrieve inner element</dt>
+                <dd>Retrieve one element from each inner list from the 2D list</dd>
+        </dl>
+    </details>
+<!--Add element to list-->
+    <div id="list_4" class="code">
+        <p class="mid">Add elements to list</p>
+        <img src="img/Add_elements_to_list.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summay class="note">code breakdown: Add element to end of list(left img)</summay>
+        <dl>
+            <dt class="syntax">Add to end of list: list_var.append(value)</dt>
+                <dd class="layout">list_var : variable that contains the list <br>
+                    .append : method to add an element to the end of the list <br>
+                    value : element that is to be added to the list</dd>
+            <dt>Line 2: create list</dt>
+            <dt>Line 5: append value</dt>
+                <dd>Adds a value to the end of the list</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: Add value via index (right img)</summary>
+        <dl>
+            <dt class="syntax">Add element via index: list_var.insert(index,element)</dt>
+                <dd class="layout">.insert : Method to add an element via index <br>
+                    index : Indicates the position (index) where the new element is going to be placed at <br>
+                    element : New element/value being added to the list</dd>
+            <dt>Lines 5-6 : insert parameters</dt>
+                <dd>These are the parameters that need to be entered into the .insert method to add an element</dd>
+            <dt> Line 8: Insert element</dt>
+                <dd>Uses the insert method to add a new element into the list <br>
+                <span style="color:red">When inserting an element it adds an element to the indicated index and pushes all elements
+                    after it up by one so no old elements are removed during this proccess</span></dd>
+        </dl>
+    </details>
+<!--Remove elements from list-->
+    <div id="list_5" class="code">
+        <p class="mid">Remove element(s) from list</p>
+        <img src="img/remove_element(s)_from_list.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown : remove element from list (left img)</summary>
+        <dl>
+            <dt class="syntax">remove element: list_var.remove(element)</dt>
+                <dd class="layout">list_var : variable that contains the list <br>
+                    .remove : method to remove an element by name <br>
+                    element : The value to be removed from the list</dd>
+            <dt> Line 2: Create list</dt>
+            <dt>Line 5: remove parameter</dt>
+                <dd>This is the parameter used when removing the element from the list</dd>
+            <dt>Line 7: Remove element</dt>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown:clearing a list (right img) </summary>
+        <dl>
+            <dt>Line 5: clear list</dt>
+        </dl>
+    </details>
+<!--pop an element-->
+    <div id="list_6"class="code">
+        <p class="mid">poping an element from a list</p>
+        <img src="img/list_pop.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">pop element: var.pop(index)</dt>
+                <dd class="layout">var : variable that contains the list <br>
+                    .pop : method to remove the last element from the list <br>
+                    index : index of the element to be removed</dd>
+                <dd class="extra">If the index is left blank it will fall back to the default which is
+                    the last element of the list
+                </dd>
+            <dt>line 2: Create list</dt>
+            <dt>line 5: remove element</dt>
+                <dd>The last element is removed from the list and removed element is stored in the variable</dd>
+            <dt class="extra">pop is a good method when wanting to use the last element of the list before removing it</dt>
+        </dl>
+    </details>
+<!--search for element through list-->
+    <div id="list_7" class="code">
+        <p class="mid">retrieve index value of element</p>
+        <img src="img/list_index_method.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">first appearance index: list_var.index(value)</dt>
+                <dd class="layout">list_var : Variable that contains the list <br>
+                    .index: method to return the index of the element's first appearance and return the index location <br>
+                    element: The value to be searched</dd>
+            <dt>Line 2: create list</dt>
+            <dt>Line 4: .index parameter</dt>
+                <dd>This is the input for the parameter used in the .index function to search the list</dd>
+            <dt>Line 7: Search and return index location</dt>
+                <dd>If search value exist then it will return the index location of the value</dd>
+                <dd>If value does not exist in list then it will return an error</dd>
+        </dl>
+    </details>
+    <div id="list_9" class="code">
+        <p class="mid">counter for element appearences</p>
+        <img src="img/list_counter.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">element counter: list_var.count(element)</dt>
+                <dd class="layout">list_var : variable that contains the list to be used <br>
+                    .count : Method that counts the number of times an element appears in a list <br>
+                    element : value to be searched in the list</dd>
+            <dt> Line 2: list creation</dt>
+            <dt>Line 5: .index parameter</dt>
+                <dd>This is the parameter needed for the count method</dd>
+            <dt>Line 7: counter</dt>
+                <dd>This counts and returns the number of times the indicated parameter appears in the list</dd>
+        </dl>
+    </details>
+    <div id="list_8" class="code">
+        <p class="mid">Sorting lists</p>
+        <img src="img/sorting_lists.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: sorting numerical values (left img)</summary>
+        <dl>
+            <dt class="syntax">sort list ascending: lis_var.sort()<br>
+                sort list descending: list_var.reverse()</dt>
+                <dd class="layout">list_var : variable that contains the list to be sorted <br>
+                    .sort() : method to sort the list in ascending order <br>
+                    .reverse() : Method to sort the list in descending order</dd>
+            <dt>line 2: create list</dt>
+            <dt>Line 5: sort list</dt>
+                <dd>This sorts the list in ascending order</dd>
+            <dt>Line 8: sort list</dt>
+                <dd>This sorts the list in descending order <br>
+                <span style="color:red">*In order to sort in descending order the list must be sorted in ascending 
+                    order via .sort() method, else the list will remain unsorted</span></dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">sorting non numereical list</summary>
+        If list is in alphabetical the list will be sorted based on the alphabet stated in the right 
+        img 
+    </details>
+</body>

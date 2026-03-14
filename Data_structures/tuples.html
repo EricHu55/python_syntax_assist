@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+        .extra {background-color:black;
+            color:azure;}
+        .mid {text-align:center;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#tuple_1">create tuple</a></li>
+        <li><a href="#tuple_2">Check frequency of a specific value</a></li>
+        <li><a href="#tuple_3">Return the index where the indicated value first appears</a></li>
+    </li>
+<!--create tuple and access elements-->
+    <div id="tuple_1" class="code">
+        <p class="mid">creating tuple and access element</p>
+        <img src="img/create_access_tuple.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">create tuple: tup_var = (elements) <br>
+                access elements: tup_var[index] <br>
+                access range of elements: tup_var[start:end]</dt>
+                <dd class="layout">tup_var : variable that contains the tuple <br>
+                    elements : values that are stored in the tuple <br>
+                    start : starting value in the range <br>
+                    end: ending value in the range</dd>
+            <dt>Line 2: Create tuple</dt>
+            <dt>Line 10: return single tuple</dt>
+            <dt>Lines 12,14,16: Return range of tuples</dt>
+                <dd>Returns a range of tuples. If the start or end parameter is left blank, it will default
+                    to the range's default start or the lenght of the tuple
+                </dd>
+            <dt>Extra:
+                <dd class="extra">1) tuples are immutable so their values cannot be changed <br>
+                    2)user cannot add or remove elements from the tuple</dd>
+            </dt>
+        </dl>
+    </details>
+<!--element frequency counter-->
+    <div id="tuple_2" class="code">
+        <p class="mid">element frequency counter</p>
+        <img src="img/tuple_freq_counter.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note"></summary>
+        <dl>
+            <dt class="sybtax">count frequency: tup_var.count[element]</dt>
+                <dd class="layout">tup_var : variable that contains the tuple <br>
+                    .count : method that counts the number of appearances of an indicated element <br>
+                    element : a value one wishes to see the number of appearances in the tuple</dd>
+        </dl>
+    </details>
+<!--check index of first appearance-->
+    <div id="tuple_3" class="code">
+        <p class="mid">check index of the first appearance of an element</p>
+        <img src="img/tuple_element_first_appearance_index.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">first appearance index: tup_var.index[element]</dt>
+                <dd class="layout">tup_var : variable that contains the tuple <br>
+                    .index : method that returns the index of the first appearance of the indicated element <br>
+                    element: Value to check to see where the index of the first appearance exist</dd>
+            <dt> line 2: create tuple</dt>
+            <dt> line 6: check first appearance index </dt>
+                <dd>If value exists it will return the index of the first appearance and terminate the search. <br>
+                    If the value does not exist in the tuple it will return an error
+                </dd>
+        </dl>
+    </details>
+</body>
