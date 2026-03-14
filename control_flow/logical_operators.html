@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../bubble.css">
+    <link rel="stylesheet" href="../../cell_layout.css">
+</head>
+<body>
+    <div class="table">
+        <ul>
+            <li><a href="#log_1"><span data-tip="A logical condition where all conditions must be true for condition to be true">logical true</span></a></li>
+            <li><a href="#log_2"><span data-tip="A logical condition where at least one condition is true ">logical or</span></a></li>
+        </ul>
+    </div>
+<!--logical and operator-->
+    <div id="log_1" class="code">
+        <p class="mid">Logical And</p>
+        <img src="img/logical AND.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="def">Logical And</dt>
+                <dd class="def">And is a logical statement where the result will be true if and only
+                    if all the conditions are true
+                </dd>
+            <dt>Line 4,5: Boolean indicator</dt>
+                <dd>The two functions will determine if the value meets the condition and returns a 
+                    true or false boolean
+                </dd>
+            <dt>Lines 11: parameter with And logical</dt>
+                <dd>Code block will only execute if both parameters return a boolean true</dd>
+            <dt>outcomes </dt>
+                <dd>As we can see from the outcomes, the if code block (Line 11) only executed when both
+                    parameters are True. When only one of the parameters are true the else block (Line 13)
+                    executed
+                </dd>
+        </dl>
+    </details>
+<!--logical or operator-->
+    <div id="log_2" class="code">
+        <p class="mid">logical Or</p>
+        <img src="img/logical OR.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">Code breakdown</summary>
+        <dl>
+            <dt class="def">logical OR</dt>
+                <dd class="def">Logical OR is a condition where the parameters must have atleast
+                    one parameter to be True for the whole statement to be True
+                </dd>
+            <dt>Line 5,6: parameter boolean</dt>
+                <dd>Determines if the conditions are met and returns a True or False statement</dd>
+            <dt>Line 13: Or statement</dt>
+                <dd>Contains an OR statement</dd>
+            <dt>Result</dt>
+                <dd>As we can see from the outcome, each outcome where atleast one of the parameters
+                    are true resulted the if statement outcome, only when both parameters are False was 
+                    when the else block executed
+                </dd>
+        </dl>
+    </details>
+</body>

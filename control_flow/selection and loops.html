@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../bubble.css">
+    <link rel="stylesheet" href="../../cell_layout.css">
+    <style>
+        /*.code : syntax frame
+        .note : summary highlight
+        .breakdown : detail frame
+        .syntax : general syntax frame
+        .layout : syntax description frame
+        .extra : standout notes
+        .mid : syntax frame heading
+        .info : rule frame
+        data-tip*/
+    </style>
+</head>
+<body>
+    <a href="#select_1"><span data-tip="provide a series of outputs based on a given condition">if, elif, else statements</span></a><br>
+    <details>
+        <summary><a href="#select_2">Foor loops</a><br></summary>
+        <dl>
+            <dt><span data-tip="Repeat a code block n number of times where n is a finite numerical value">for loop in range index counter</span></dt>
+            <dt><span data-tip="itterate through the values of an itterable one at a time till the end">for element in list_name</span></dt>
+        </dl>
+    </details>
+    <a href="#select_3"><span data-tip="iterate through a list adding the index value for the current element">for loop enumerate</span></a><br>
+    <a href="#select_4"><span data-tip="repeat a code block as long as the given condition is true">while(condition):</span></a><br>
+    <a href="#select_5"><span data-tip="A loop within another loop where the inner loop execution is dependent on the outer loop">Nested loop</span></a><br>
+
+<!--If and else selection-->
+    <div id="select_1" class="code">
+        <p class="mid">If, elif, else statements</p>
+        <img src="img/if_elif_else.jpg" height="300px">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>functionality of if/elif/else</dt>
+                <dd>if, elif, else are selections that allows the program to make a decision based on whether certain
+                    conditions are met or not. It will start from the top if statement and work its way down until one of
+                    the conditions are met inwhich the code block to that statement would be executed.
+                </dd>
+            <dt>Lines 2,4,6: conditions</dt>
+                <dd>These are the conditions in which the paramater must satisfy in order for the code block to execute,
+                    if they don't meet the requirements the code block would be skipped
+                </dd>
+            <dt>Lines 1,3,5: code blocks</dt>
+                <dd>Code blocks are snippets of code that will execute if the condition they are under are met.</dd>
+            <dt class="extra">1) snippets of code in a code block cannot be accessed outside of the code block <br>
+                2)Any code that is not within the code block would not be included when the code block is executed</dt>
+        </dl>
+    </details>
+<!--for loop-->
+    <div id="select_2" class="code">
+        <p class="mid"></p>for loop</p>
+        <img src="img/for_loop.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">format: for i in range(start,end,step)</dt>
+                <dd class="layout">i : placement holder for the counter (this can be named anything) <br>
+                    start : The starting value for the counter <br>
+                    end : The last value to stop, this value is not included in the counter so once this value is reached the 
+                        for loop terminates <br>
+                    step: This is the rate at which the counter increases or decreases per session</dd>
+        </dl>
+    </details>
+<!--for loop with enumerate-->
+    <div id="select_3" class="code">
+        <p class="mid">for loop with enumerate</p>
+        <img src="img/for_loop_with_enumerate.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">enumerate format: for index,value in enumerate(content)</dt>
+                <dd class="layout">index : variable that stores the index placement value of the currently proccessed element <br>
+                    value : variable that stores the currently processed element in the loop <br>
+                    enumerate : method that lets the function to track the position (index) of the element being processed <br>
+                    content : This is the condition being processed for the for loop</dd>
+            <dt>Line 1: blank variable initiation</dt>
+                <dd>This initiates the variable to a null type, which means a variable was created with no assigned 
+                    datatype or value</dd>
+            <dt>Line 3: for loop with enumerate</dt>
+                <dd>create a for loop with the enumerate function to track the index of the element being processed</dd>
+        </dl>
+    </details>
+<!--while loop-->
+    <div id="select_4" class="code">
+        <p class="mid">While looping</p>
+        <img src="img/while_loop.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: while counter (left)</summary>
+        <dl>
+            <dt>while counter</dt>
+                <dd class="extra">while counter is a while loop that acts similar to a for loop</dd>
+            <dt>Lines 2,3: initialization/tracher</dt>
+                <dd>initializes the variable and stores any changes performed for these variables in the code block</dd>
+            <dt>Line 4: while loop condition</dt>
+                <dd>Loop terminates when counter exceeds the value 10</dd>
+            <dt>Lines 6-9: code block</dt>
+                <dd> Line 6: Adds value to the total variable which would be stored into line 3 Total</dd>
+                <dd>Line 9: Increases counter by 1</dd>
+            <dt>Important note:</dt>
+                <dd class="extra">1) A counter while while loop operates like a for loop, however without a counter it will result
+                    as an inifinite loop as it will never end
+                </dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: While conditional: repetition(middle)</summary>
+        <dl>
+            <dt>Conditional while loop</dt>
+                <dd class="extra">A conditional while loop is that can be used when the number of repetitions is unknown.
+                    The termination of the loop is not by counter, but when a certain contition is met
+                </dd>
+            <dt>Line3-5: variable initialization</dt>
+                <dd>Creates the variable and stores any changes to the variables within the code block</dd>
+            <dt>Line 6: while loop condition</dt>
+                <dd>loop will continue to execute until grade value = -1</dd>
+            <dt>Lines 7-9: Code block</dt>
+                <dd>Line 7: User input for grade variable<br>
+                    Line 8: Adds grade input to the total in total variable <br>
+                    Line 9: Increment counter variable<br>
+                    <span style="color:red">#Note that the counter variable here has nothing to do with the parameter to terminate the loop</span>
+                </dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: while conditional True parameter (right)</summary>
+        <dl>
+            <dt>Line 3-5: variable intialization</dt>
+                <dd>Initializes variables and stores any changes to these variables in the loop</dd>
+            <dt>Line 6: While loop parameter</dt>
+                <dd>Auto looping capability</dd>
+            <dt>Lines 9-11: loop termination</dt>
+                <dd>If the condition in the if statement is true the loop will be terminated</dd>
+                <dd>break: A syntax used to exit a loop and return to the original code</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">While loop repetition vs True Parameter</summary>
+        <dl>
+            <dt>repetition pros:</dt>
+                <dd>1) good for simplicity and easy to manage</dd>
+                <dd>2) No concern of accidentally creating an infinite loop</dd>
+            <dt>Repetition cons:
+                <dd>1) A condition must be initiated for the loop to initiate</dd>
+                <dd>2) parameter must be put into consideration when creating the code block</dd>
+                <dd>3) When using input, placemenbt of execution can affect the parameter</dd>
+                <dd>4) Difficult to create when the function of the code contains complex conditions</dd>
+            <dt>True parameter pros:
+                <dd>1) This creates an auto looping where a legit parameter is not required</dd>
+                <dd>2) Code block creation does not need to consider parameter</dd>
+                <dd>3) flexible as complex function of loop is easily created</dd>
+            <dt>True parameter cons:</dt>
+                <dd>Placememt of break to terminate loop is important as misplacement can create an infinite loop</dd>
+            </dt>
+            </dt>
+        </dl>
+    </details>
+<!--Nested loops-->
+    <div id="select_5" class="code">
+        <p class="mid">Nested loops</p>
+        <img src="img/nested_loop.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 4: first loop</dt>
+                <dd>When condition in parameter is true, code block will be executed</dd>
+            <dt>Line 6: Nested loop</dt>
+                <dd>The nested loop will continue to execute until the parameter is false before returning
+                    execution back to the outer loop
+                </dd>
+            <dt> Note:
+                <dd class="extra">This cycle will continue to repeat itself until the parameter for the outer
+                    loop becomes false. Then the code will return the execution back to the main code
+                </dd>
+            </dt>
+        </dl>
+    </details>
+</body>
