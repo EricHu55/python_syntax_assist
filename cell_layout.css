@@ -1,0 +1,29 @@
+.code {width:70%;
+    border:1px red solid;
+    }
+.note {background-color:yellow;
+    border:1px solid orange;}
+.breakdown {border:1px solid blue;
+    background-color:aqua;
+    width:70%;}
+.syntax {color:blueviolet;}
+.layout {color:darkred}
+.extra {background-color:black;
+    color:azure;}
+.mid {text-align:center;}
+.info {background-color:lightcoral;
+    border: 1px dotted blue;
+    color:darkmagenta}
+.cell {background-color: lightcoral}
+.nest {width:70%;
+border: 1px solid green;
+background-color:lightskyblue}
+.nested {background-color:black;
+color:floralwhite}
+.table {border:1px solid purple;
+    width:100%;
+    background-color:yellow;
+    margin-bottom:20px;}
+.info2 {background-color:beige;
+border: 1px solid, yellow;
+margin:3px;}

@@ -1,0 +1,34 @@
+body {overflow-x:auto;
+    white-space:nowrap;}
+.category {width:500px;
+    border:solid,red,1px;
+    margin-right: 10px;
+    display:inline-block;
+    vertical-align:top;}
+[data-tip] {
+    position : relative;
+    display: inline-block;
+    cursor: pointer;
+}
+[data-tip]::after {
+    content: attr(data-tip);
+    position: absolute;
+    left:300%;
+    top:100%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    max-width: 90vw;
+    overflow-wrap: break-word;
+    box-sizing:border-box;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+[data-tip]:hover::after {
+    opacity: 1;
+}

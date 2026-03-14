@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="bubble.css">
+    <link rel="stylesheet" href="cell_layout_2.css">        
+</head>
+<body>
+    <!--Referencing-->
+    <div class="code flex_row">
+        <div>
+            <ul>
+                <li><details>
+                    <summary><a href="#C1">Basics</a></summary> 
+                    <ul>
+                        <li><a href="#T1">Basic Arithmetics</a></li>
+                        <li><a href="#T2">user input</a></li>
+                        <li><a href="#T3">variables</a></li>
+                    </ul>
+                </details></li>
+                <li><details>
+                    <summary><a href="#C2">Control Flow</a></summary>
+                    <ul>
+                        <li><a href="#T4">Logical operators</a></li>
+                        <li><a href="#T5">selection and loops</a></li>
+                    </ul>
+                </details></li>
+                <li><details>
+                    <summary><a href="#C3">Data Structures</a></summary>
+                    <ul>
+                        <li><a href="#T6">Dictionaries</a></li>
+                        <li><a href="#T7">Lists</a></li>
+                        <li><a href="#T8">Tuples</a></li>
+                    </ul>
+                </details></li>
+                <li><a href="#C4">Exceptions</a></li>
+                <li><a href="#C5">File Management</a></li>
+                <li><a href="#C6">Functions</a></li>
+                <li><a href="#C7">Libraries</a></li>
+                <ul>
+                    <li><a href="#T19">Pandas Library prt 1</a></li>
+                    <li><a href="#T10">Pandas library part 2</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+<h1 id="C1">Basics</h1>
+<div class="code">
+    <details>
+        <summary id="T1">Basic Arithmetic</summary>
+        <ul>
+            <li><a href="python/Basics/Basic_Arithmetic.html#Arith_1" 
+                title="Perform basic arithmetic operations (add,sub,multi,div)">Basic Arithmetic operations</a></li>
+            <li><a href="python/Basics/Basic_Arithmetic.html#Arith_2" 
+                title="Remainder : Returns remainder value after division, Floor: Returns the whole number after division">Division unique values: Floor and Remainder</a></li>
+            <li><a href="python/Basics/Basic_Arithmetic.html#Arith_3" 
+                title="Short hand for adding new value to itself">Augmented / Enhanced assignemnt</a></li>
+
+        </ul>
+    </details>
+</div>
+<div class="code">
+    <details>
+        <summary id="T2">User Input</summary>
+        <ul>
+            <li><a href="python/Basics/user_input.html#input_1" 
+                 title="assign data to variable via user input at runtime">User input</a></li>
+            <li><a href="python/Basics/user_input.html#input_2" 
+                 title="shorthand for assigning multiple variables of the same type">unpacking variables</a></li>
+        </ul>
+    </details>
+</div>
+
+
+<div class="code">
+    <details>
+        <summary id="T3">Variables</summary>
+        <ul>
+            <li><a href="python/Basics/variable.html#var_1" title="Creating and assigning an element to a variable">assigning values to variables</a></li>
+            <li><a href="python/Basics/variable.html#var_2" title="Series of basic datatypes commonly used for variables">Basic datatypes</a></li>
+            <li><a href="python/Basics/variable.html#var_3" title="Temporarily changing the datatype of a variable without creating a new one">temporary Change datatype (Type casting)</a></li>
+            <li><a href="python/Basics/variable.html#var_4" title="A copy is an image of the targeted variable while a pointer is mirror of the targetted variable">pointer vs copy</a></li>
+            <li><a href="python/Basics/variable.html#var_5" title="shorthand for assigning elements to multiple variables where the element quantity = variable quantity">variable unpacking</a></li>
+        </ul>
+    </details>
+</div>
+<h1 id="C2">Control_Flow</h1>
+<div class="code">
+        <details>
+            <summary id="T4">Logical Operators</summary>
+            <ul>
+                <li><a href="python/control_flow/logical_operators.html#Log_1" title="A logical condition where all conditions must be true for condition to be true">logical true</a></li>
+                <li><a href="#python/control_flow/logical_operators.htmllog_2" title="A logical condition where at least one condition is true ">logical or</a></li>
+            </ul>
+        </details>
+</div>
+<div class="code">
+    <details>
+        <summary id="T5">Selection and loops</summary>
+        <ul>
+            <li><a href="python/control_flow/selection and loops.html#select_1" title="provide a series of outputs based on a given condition">if, elif, else statements</a></li>
+            <li><details>
+                    <summary><a href="python/control_flow/selection and loops.html#select_2">For loops</a></summary>
+                    <dl>
+                        <dt title="Repeat a code block n number of times where n is a finite numerical value">List numerical index iteration</dt>
+                        <dt title="itterate through the values of an itterable one at a time till the end">List element iteration</dt>
+                    </dl>
+                </details></li>
+            <li><a href="python/control_flow/selection and loops.html#select_3" title="iterate through a list adding the index value for the current element">for loop enumerate</a></li>
+            <li><a href="python/control_flow/selection and loops.html#select_4" title="repeat a code block as long as the given condition is true">while(condition):</a></li>
+            <li><a href="python/control_flow/selection and loops.html#select_5" title="A loop within another loop where the inner loop execution is dependent on the outer loop">Nested loop</a></li>
+        </ul>
+    </details>
+</div>
+<h1 id="C3">Data Structures</h1>
+<div class="code">
+    <details>
+        <summary id="T6">Dictionaries</summary>
+        <ul>
+            <li><a href="python/Data_structures/dictionaries.html#dict_1" title=" ->creating / defining a blank dictionary">Dictionary initialization</a> </li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_2" title=" ->Retrieve value via key search">Retrieve value via key search</a> </li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_3" title=" ->updating an existing key with a new value">Dictionary value update</a></li> 
+            <li><a href="python/Data_structures/dictionaries.html#dict_3" title=" ->creating a new key value pair during runtime">dictionary key:value creation</a></li>
+            <li><details>
+                <summary><a href="python/Data_structures/dictionaries.html#dict_4">itteration of keys / values / key : value pairs</a></summary>
+                    <dl>
+                        <dt title=" ->display all keys only in a dictionary">Dictionary key output</dt>
+                        <dt title=" ->disp;ay all values only in a dictionary">dictionary value output</dt>
+                        <dt title=" ->display all key and values in pairs in a dictionary">dictionary key value pair output</dt>
+                    </dl>
+            </details></li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_5" title=" ->remove a key : value pair in a dictionary during runtime">dictionary select key removal</a></li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_6" title=" ->delete all key: value pairs in a dictionary">clear dictionary</a></li>
+            <li><details>
+                <summary><a href="#dict_7" title=" ->Access each key or value independently">key : value pair iteration</a></summary>
+                    <dl>
+                        <dt title=" -> for key in dictionary.keys()">Key iteration for loop</dt>
+                        <dt title=" -> for value in dictionary.values():">value iteration for loop</dt>
+                        <dt title=" -> for key,value in datatype.items():">key value pair iteration for loop</dt>
+                    </dl>
+            </details></li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_8" title=" -> variable = dict(zip(tuple,iterable))">dictionary creation (zip func + dictionary constructor)</a></li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_9" title=" -> variable = dict.fromkeys(tuple)">create dictionary with a default none type</a> </li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_10" title=" -> variable = dictionary.setdefault(key,value)">Retrieve existing key / value pair else create new pair</a> </li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_11" title="-> dictionary.update(dictionary 2)">Merging dictionaries</a> </li>
+            <li><details>
+                <summary><a href="python/Data_structures/dictionaries.html#dict_12">creating a copy of a dictionary</a></summary>
+                    <dl>
+                        <dt title="-> dictionary.copy()">Create dictionary copy linked to original</dt>
+                        <dt title="-> copy.deepcopy(dictionary)">Create independent dictionary copy</dt>
+                    </dl>
+            </details></li>
+            <li><details>
+                <summary><a href="python/Data_structures/dictionaries.html#dict_14" title="Looping through the dictionary where the user is in full control">convert dictionary to manual iterable</a></summary>
+                <dl>
+                    <dt title="-> variable = iter(dictionary)">dictionary keys manual iterable</dt>
+                    <dt title="-> variable = iter(dictionary.values())">dictionary values manual iterable</dt>
+                    <dt title="-> variable = iter(dictionary.items())">dictionary pairs manual iterable</dt>
+                    <dt title="-> next(dict/dict.values()/dict.items())">iterate through the keys/values/pairs</dt>
+                </dl>
+            </details></li>
+            <li><details>
+                <summary><a href="python/Data_structures/dictionaries.html#dict_15">sorting dictionary</a></summary>
+                <dl>
+                    <dt title="-> variable = sorted(dictionary)">variable = sorted(dictionary)sorting dictionary keys</dt>
+                    <dt title="-> variable = sorted(dictionary.values())">sorting dictionary values</dt>
+                    <dt title="-> variable = sorted(dictionary.items())">sorting dictionary pairs</dt>
+                </dl>
+            </details></li>
+            <li><a href="python/Data_structures/dictionaries.html#dict_16">check if key in dictionary</a></li>
+        </ul>
+    </details>
+</div>
+<div class="code">
+    <details>
+        <summary id="T7">Lists</summary>
+            <ul>
+        <li><details>
+            <summary><a href="python/Data_structures/Lists.html#list_1">List creation and element access</a></summary>
+            <dl>
+                <dt title="-> list_name=[ ]">Creating a list</dt>
+                <dt title="list_name[index]">Access individual list element</dt>
+                <dt title="list_name[start_index : end_index]">Access list elements consecutive range</dt>
+            </dl>
+            </details></li>
+        <li><a href="python/Data_structures/Lists.html#list_2" title="list_name[index] = new value">List element update</a></li>
+        <li><details>
+            <summary><a href="python/Data_structures/Lists.html#list_3">create 2D list and access elements</a></summary>
+            <dl>
+                <dt title="list_name = [ [list1],[list2]]">creating a 2D list</dt>
+                <dt title="list_name[set index]">Access sub list</dt>
+                <dt title="list_name[set_index][element_index]]">Access sub list element(s)</dt>
+            </dl>
+            </details></li>
+        <li><a href="python/Data_structures/Lists.html#list_4" title="list_name.append(value)">Add element to list end</a></li>
+        <li><details>
+            <summary><a href="python/Data_structures/Lists.html#list_5">remove element(s) from list</a></summary>
+            <dl>
+                <dt title="list_name.remove(element)">List remove single element</dt>
+                <dt title="list_name.clear()">clear all list elements</dt>
+            </dl>
+            </details></li>
+        <li><a href="python/Data_structures/Lists.html#list_6" title="list_name.pop()">Retrieve then remove last list element</a></li>
+        <li><a href="python/Data_structures/Lists.html#list_7" title="list_name.index(value)">Return select list element index</a></li>
+        <li><details>
+            <summary><a href="python/Data_structures/Lists.html#list_8">sorting lists</a></summary>
+            <dl>
+                <dt title="list_name.sort()">sort list ascending order</dt>
+                <dt title="list_name.reverse()">sort list descending order</dt>
+            </dl>
+            </details>
+        <li><a href="python/Data_structures/Lists.html#list_9" title="list_name.count(element)">Return select element frequency</a></li>
+        </ul>
+    </details>
+</div>
+<div class="code">
+    <details id="T8">
+        <summary>Tuples</summary>
+        <ul>
+            <li><a href="python/Data_structures/tuples.html#tuple_1">create tuple</a></li>
+            <li><a href="python/Data_structures/tuples.html#tuple_2">Check frequency of a specific value</a></li>
+            <li><a href="python/Data_structures/tuples.html#tuple_3">Return the index where the indicated value first appears</a></li>
+        </ul>
+    </details>
+</div>
+
+<h1 id="C4">Exceptions</h1>
+<div class="code">
+    <details>
+        <summary>Exception errors</summary>
+        <ul>
+            <li><a href="python/Exceptions/exception.html#excep_1">ArithmeticError exception group</a></li>
+            <li><a href="python/Exceptions/exception.html#excep_2">AttributeError exception</a></li>
+            <li><a href="python/Exceptions/exception.html#excep_3">TypeError exception</a></li>
+            <li><a href="python/Exceptions/exception.html#excep_4">ValueError exception</a></li>
+            <li><a href="python/Exceptions/exception.html#excep_5">IndexError exception</a></li>
+            <li><a href="python/Exceptions/exception.html#excep_6">NameError exception</a></li>
+        </ul>
+    </details>
+</div>
+
+<h1 id="C5">FileIO</h1>
+<div class="code">
+    <details>
+        <summary>File input and output</summary>
+        <ul>
+            <li><details>
+                <summary><a href="python/FileIO/file_management.html#file_1">Open file from harddrive</a></summar> 
+                    <dl>
+                        <dt title="using forward slashes">variable = open("c:/path/path.file","r")</dt>
+                        <dt title="using double back slash">variable = open("c:\\path\\path\\file","r")</dt>
+                        <dt title="raw string method">variable = open(r"c:\path\path\file","r")</dt>
+                    </dl>
+                </details></li>
+            <li><details>
+                <summary><a href="python/FileIO/file_management.html#file_2">Read file</a></summary>
+                <dl>
+                    <dt title="read file by line">read file via loop</dt>
+                    <dt title="read file as a whole">open_file_var.read()</dt>
+                </dl>
+                </details></li>
+            <li><a href="python/FileIO/file_management.html#file_3" title="Reset cursor to certain placement of file after reaching end">file_name.seek(int)</a></li>
+            <li><details>
+                <summary><a href="python/FileIO/file_management.html#file_4">remove whitespace</a></summary>
+                <dl>
+                    <dt title="removes trailing whitespace from the right side">.rstrip()</dt>
+                    <dt title="remove trailing whitespace from the left side">.lstrip()</dt>
+                    <dt title="remove trailing whitespace from both sides">.strip()</dt>
+                </dl>
+                </details></li>
+            <li><a href="python/FileIO/file_management.html#file_4" title="only output lines with a specific word">.startswith("word")</a></summary></li>
+            <li><details>
+                <summary><a href="python/FileIO/file_management.html#file_5">create new text file</a></summary>
+                <dl>
+                    <dt title="creates a new file">open("file path","w+")</dt>
+                    <dt title="Adds text lines to the newly created text file">.writelines(text)</dt>
+                </dl>
+                </details></li>
+            <li><a href="python/FileIO/file_management.html#file_5">filter line based on keyword</a></li>
+        </ul>
+</details>
+</div>
+
+<h1 id="C6">Functions</h1>
+<div class="code">
+    <details>
+        <summary>Functions</summary>
+        <ul>
+            <li><details>
+            <summary><a href="#func_1">create and execute functions</a></summary>
+                <dl>
+                    <dt title="create a function with parameters">def name(para1, para2):</dt>
+                    <dt title="call and run function">func_name(para1, para2)</dt>
+                </dl>
+                </details></li>
+            <li><a href="#func_2" title="create a function where the end result of the function can be stored for later usage">return type function</a></li>
+            <li><a href="#func_3" title="when a function has multiple return values, store each value into a seperate variable">function return type unpacking</a></li>
+            <li><a href="#func_4" title="One function directly retrieves the return value of another function">function chaining/coposition</a></li>
+    </details>
+</div>
+
+<h1 id="C7">Libraries</h1>
+<div class="code flex_row">
+    <div>
+        <details>
+            <summary id="T9">Pandas Library</summary>
+                <li><a href="python/Libraries/Pandas_library_update.html#panda_1" title=" -> pd.Series(list) ">Create a 1D organized list for data analytics</a></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_2">Create Dataframe methods</a></summary>
+                    <ul>
+                        <li title=" ->pd.DataFrame({'column':Series,'column':Series})">Create dataframe by using pre-created Series</li>
+                        <li title=" ->pd.DataFrame({'column':(dataset),'column':(dataset)})">Create dataframe by entering data 1 column at a time</li>
+                        <li title=" ->pd.DataFrame({[[row1 data],[row2 data]],columns=(col1,col2)})">Create Dataframe by entering data 1 row at a time</li>
+                    </ul>
+                    </details></li>
+                <li><a href="python/Libraries/Pandas_library_update.html#panda_3" title=" ->dataframe_name[column] = Series">Adds a Series to dataframe</a></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_4">Dataframe output of specic cells</a></summary>
+                    <ul>
+                        <li title=" ->Dataframe.loc(row_index,col_name)">pandas loc method: single cell search</li>
+                        <li title=" ->Dataframe.loc[row_index_init : row_index_end, col_name_init : col_name_end]">pandas loc method: multi cell block search</li>
+                        <li title=" ->Dataframe.loc[row_index_init : row_index_end] / Dataframe.loc[row_index_init : row_index_end, col_name_init : col_name_end]">pandas loc method: entire row/column search</li>
+                        <li title=" ->Dataframe.iloc[row_index, col_index]">pandas iloc method: single cell search</li>
+                        <li title=" ->Dataframe.iloc[row_index_init : row_index_end, col_index_init : col_index_end]">pandas iloc method: multi cell block search</li>
+                        <li title=" ->Dataframe.iloc[row_index_init : row_index_end] / Dataframe.iloc[row_index_init : row_index_end, col_index_init : col_index_end]">pandas iloc method: entire row/column search</li>
+                        <li title=" ->Dataframe.loc[row_index_init : row_index : row_index : row_interval, col_name : col_name : col_interval] / Dataframe.iloc[row_index : row_index : row_interval , col_index : col_index : col_interval]">pandas loc/iloc method: coordinate selection using interval pattern selection</li>
+                        <li title=" ->Dataframe.head(n) / Dataframe.tails(n)">pandas head/tail method : output from only the top or bottom of dataframe</li>
+                    </ul>
+                    </details></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_5">sorting dataframe</a></summary>
+                    <ul>
+                        <li title=" ->dataframe.sort_values(by=col_name, ascending=True/False)">Sorts a dataframe based on a specific column in ascending or descending order</li>
+                        <li title=" ->Dataframe.sort_values(by=[col_name1, col_name2], ascending=(True/False, Trule/False])">Perform a multi-layered sort on a dataframe</li>
+                    </ul>
+                    </details></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_6">value_count method</a></summary>
+                        <ul>
+                            <li title=" ->dataframe[col].value_counts() / dataframe.value_counts()">count the number of appearances of each unique value and output as an integer counter via Series and dataframes</li>
+                            <li title=" ->dataframe[col].value_counts(normalize=True) / dataframe.value_counts(normalize=True)">count the number of appearances of each unique value and output as a percentage via series and dataframe</li>
+                            <li title=" ->dataframe[col].value_counts(bin=int)">counts the number of appearances of each unique element and returns the value as a histogram via Series</li>
+                        </ul>
+                    </details></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_7">Filtering methods</a></summary>
+                        <ul>
+                            <li title=" ->dataframe[dataframe[col](operator)element]">Filter dataframe based on specific conditions</li>
+                            <li title=" -> dataframe[dataframe['col'].isin(['value(s)'])]">basic isin method single column filter</li>
+                            <li title=" -> dataframe[dataframe.isin({'col' : [value(s), 'col' : [value(s)'']]})]">basic isin method multi column filter</li>
+                            <li title=" -> dataframe[dataframe.isin({'col' : [value(s)]}).any(axis=1)]">isin method multi column filter: output true onlye</li>
+                        </ul>
+                    </details></li>
+                <li><a href="python/Libraries/Pandas_library_update.html#panda_8" title=" ->dataframe.groupby(col)">Creates unique sub groups via groupby method</a></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_9">.aggregation variartions</a></summary>
+                    <ul>
+                        <li title=" ->dataframe[cols].agg('func')">Basic aggregation with built-in functions</li>
+                        <li title=" ->dataframe[col].agg(func)">basic aggregation function with custom functions</li>
+                        <li title=" ->dataframe.agg(['col' : 'funcs'])">Using dictionary method to input aggregation functions for each col</li>
+                    </ul>
+                    </details></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_10">apply method variations</a></summary>
+                        <ul>
+                            <li title=" ->dataframe[col.apply(func)]">perform .apply method on select columns</li>
+                            <li title=" ->dataframe.apply(func, axis=1)">perform .apply method to all rows of the dataframe</li>
+                            <li title=" ->dataframe.loc[a:b].apply(func, axis=1)">Perform .apply method to select rows</li>
+                            <li title=" ->dataframe[col].apply(lambda x: expression)">Perform .apply method using lambda function</li>
+                        </ul>
+                    </details></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_11">column datatype conversion</a></summary>
+                    <ul>
+                        <li title="dataframe[col].astype('datatype') ">needs to be adjusted</li>
+                        <li title="dataframe['col'] = pd.to_type(datatype['col'])">pandas column type conversion</li>
+                    </ul>
+                </details></li>
+                <li><details>
+                    <summary><a href="python/Libraries/Pandas_library_update.html#panda_12">Map method</a></summary>
+                    <ul>
+                        <li title=" ->dataframe[col].map(list)">Single column transformation</li>
+                        <li title=" ->dataframe[[col1, col2]].map(list/function)">Multiple column transformation</li>
+                        <li title=" ->dataframe[col].map(list/function, na_actions='ignore')">transformation with NaN value handling</li>
+                    </ul>
+                </details></li>
+        </details>
+    </div>
+    <div>
+        <details>
+            <summary id="T10">Pandas library part 2</summary>
+            <ul>
+                <li><details>
+                    <summary><a href="python/Libraries/pandas_library_2.html#panda_13">Pandas concat methods</a></summary>
+                    <ul>
+                        <li title=" ->pd.concat([df1, df2], axis=0)">Merge by columns (unique columns fill space with NaN)</li>
+                        <li title=" ->pd.concat([df1, df2], axis=1)">Merge by rows (index)</li>
+                        <li title=" ->pd.concat([df1, df2], join = 'outer')">Outer join (show unique columns)</li>
+                        <li title=" ->pd.concat(pdf1, df2], join = 'inner')">Inner join (show common columns)</li>
+                    </ul>
+                    </details></li>
+                <li><details>
+                        <summary><a href="python/Libraries/pandas_library_2.html#panda_14">Pandas NaN value handling</a></summary>
+                        <details>
+                            <summary>Removing NaN values</summary>
+                            <ul>
+                                <li title="-> dataframe.dropna()">Remove all NaN values</li>
+                                <li title="-> dataframe.dropna(subset = ['col1, col2'], axis=0)">Remove rows with NaN values in select columns</li>
+                                <li title="-> dataframe.dropna(axis=1)">Remove columns with NaN values</li>
+                                <li title="-> dataframe.dropna(axis = (0/1), thresh = int)">Remove columns/rows if non-NaN values less than specified</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Filling NaN values</summary>
+                            <ul>
+                                <li title=" -> dataframe.fillna(value)">Fill NaN with specified value</li>
+                                <li title=" ->dataframe['col1'].fillna(dataframe['col2'].mean())">Fill NaN with mean, median, mode</li>
+                                <li title=" -> dataframe['col'].ffill() / .bfill()">fill NaN direction forward, backward</li>
+                            </ul>
+                        </details>
+                    </details></li>
+            </ul>
+        </details>
+
+    </div>
+</div>
+<div class="code">
+    <details>
+        <summary id="T11">Matplotlib</summary>
+        <ul>
+            <li>
+                <details>
+                    <summary><a href="python/Libraries/Matplotlib.html#mat_1">Line plot features</a></summary>
+                    <ul>
+                        <li title="-> post coords and plot a line graph">basic line plot</li>
+                        <li title="-> Change the line color of the selected graph">Line plot color change</li>
+                        <li title="-> Change the style appearance of the line of selected line graph">Line plot style change</li>
+                        <li title="-> Change the icon used to mark the points of the graph">Line plot marker point change</li>
+                        <li title="-> Limit the axis range to display a specific section of the graph instead of the whole">Line plot axis limits</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="python/Libraries/Matplotlib.html#mat_2">Scatter plot features</a></summary>
+                    <ul>
+                        <li title="-> post coords and plot a scatter graph">Basic scatter plot</li>
+                        <li title="-> Change the color of the points in the selected scatter plot">Scatter plot point color change</li>
+                        <li title="-> Change the size of the points in the selected scatter plot">scatter point size change</li>
+                        <li title="-> Change the transparency(see through) of the points in the selected scatter plot">scatter plot point transparency</li>
+                        <li title="-> change the rim color around the points of the selected scatter plot">scatter plot point edgecolors</li>
+                        <li title="-> give each point a different color and point size based on a color map">scatter plot customize color scheme</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="python/Libraries/Matplotlib.html#mat_3">Histogram features</a></summary>
+                    <ul>
+                        <li title="-> Create histogram with two sets of data where corresponding bars are placed side by side">side by side histogram</li>
+                        <li title="-> create historgram where plotted data of 2+ graphs can overlap eachother">histogram overlapping plot</li>
+                        <li title="-> change the color of the bars of selected graphs">histogram bar colors</li>
+                        <li title="-> change the edge color of the bars of selected graphs">histogram bar edgecolor</li>
+                        <li title="-> Change the transparency(see through) of the bars of selected graphs">histogram bar transparency</li>
+                        <li title="-> organize data into groups and create bar graphs based on those groups">histogram bin distribution</li>
+                        <li title="-> change the width of the bars of selected graphs">histogram bar width</li>
+                        <li title="-> 2+ graphs where corresponding bars are stacked on top of eachother (visualization only)">stacked bars</li>
+                        <li title="-> Restrict the accepted range of values to plot">Range parameter</li>
+                        <li title="-> Change the appearance of the bars, but data of bars will be interpreted as original">histype parameter</li>
+                        <li title="-> corresponding graphs are stacked and data interpreted are also adjusted to visual">stacked parameter</li>
+                        <li title="-> Change dependent variable axis location (X / Y axis)">Orientation parameter</li>
+                        <li title="-> Change the Y-axis scale (independent) from a standard scale to a logarithmic scale">Log scale</li>
+                        <li title="-> Change the starting position of the bars within the column region">Align parameter</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="python/Libraries/Matplotlib.html#mat_4">Boxplot features</a></summary>
+                    <ul>
+                        <li title="-> Determine poisitioning of box plot : Horizontal or vertical">Orientation parameter</li>
+                        <li title="-> Display outliers in the box plot">show filter parameter</li>
+                        <li title="-> Display quartile values in the box plot graph">Boxplot with quartile values</li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </details>
+</div>
+
+</body>
