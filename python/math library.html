@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+    </style>
+</head>
+<body>
+    <div class="code">
+        <p><center>Round up and down</center></p>
+        <img src="syntax img/rounding.jpg" width="50%">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">format: round(num) <br>
+                math.ceil(num) <br>
+                math.floor(num)</dt>
+                <dd class="layout">round: syntax to round a number a number <br>
+                    math.ceil : syntax to ensure a number is rounded up <br>
+                    math.floor : Syntax to ensure a number is rounded down</dd>
+            <dt>Line 1: Import math library</dt>
+                <dd>Math ibrary contains preset functions for more complex math operations</dd>
+            <dt> Lines 4,5: rounding numbers</dt>
+                <dd>Rounds a number based on last digit: <br>
+                    down: num < 5 <br>
+                    up: num >= 5</dd>
+            <dt>Line 6: round up</dt>
+                <dd>ignores the basic rounding rules and immediately rounds the number up</dd>
+            <dt>Line 7: Round down</dt>
+                <dd>ignores the basic rounding rules and immediately rounds the number down</dd>
+        </dl>
+    </details>
+    
+    <div class="code">
+        <p><center>Absolute value</center></p>
+        <img src="syntax img/abs_function.jpg" width="50%">
+    </div>
+    <dl>
+        <dt class="syntax">format: abs(var)</dt>
+            <dd class="layout">abs : syntax to perform the absolute value of a number</dd>
+    </dl>
+
+</body>

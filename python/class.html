@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../bubble.css">
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+        .extra {background-color:black;
+            color:azure;}
+        .mid {text-align:center;}
+    </style>
+</head>
+<body>
+    <a href="#c1"><span data-tip="basic format to create class with init constructor">class/object creation</span></a>
+<!--class basic formation-->
+    <details class="breakdown">
+        <summary class="note">Basic information on classes</summary>
+        <dl>
+            <dt>class</dt>
+                <dd>A blueprint that contains a set of instructions for what to do. These
+                    instructions consists of fucntions and methods</dd>
+            <dt>class name</dt>
+                <dd>Defines the class and initiates the class block</dd>
+            <dt>objects</dt>
+                <dd>Objects are instances of a class, where the blueprint of the class was used to 
+                    create these uique instances</dd>
+        
+        </dl>
+    </details>
+<!--class execution-->
+    <div id="c1" class="code">
+        <p class="mid">class creation and object creation</p>
+        <img src="syntax img/create_class_and_object.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown: class creation</summary>
+        <dl>
+            <dt class="syntax">create class : class name: <br>
+                initializer constructor : __init__(self,para1,para2,para n)</dt>
+                <dd class="layout">class : syntax that initiates the class block <br>
+                    name : The name of the class <br>
+                    __init__ : constructor method that executes when initializing the object <br>
+                    self : A parameter references back to the created object <br>
+                    para 1-n : The list of parameters that the object would use</dd>
+            <dt> Line 2: class creation</dt>
+                <dd>Creates the class with the name of the class</dd>
+            <dt>Line 3: object initialization</dt>
+                <dd>This is the section that allows the retrevial of parameters from the user</dd>
+            <dt>Lines 4-7: attribute creation</dt>
+                <dd>These are the attributes that are created for the object</dd>
+                <dd class="extra"> The syntax self.street = street allows the class to 
+                    convert the parameter into an object attribute</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: object creation and attribute retrival</summary>
+        <dl>
+            <dt class="syntax">create object : object_name = class_name(para 1-n) <br>
+                attribute retrival : object_name.attribute(s)</dt>
+                <dd class="layout"> object_name : Name of the object <br>
+                    class_name : Name of the class <br>
+                    para 1-n : Paramaters 1-n</dd>
+                <dd class="extra">1) The number of parameters when creating the object should match
+                    the number of parameters in the constructor method <br>
+                    2)The paramater formation should be the same as the paramaters formation in the constructor</dd>
+            <dt>Line 15: create object</dt>
+                <dd>This uses the class to create an object and store the object into a variable for future usage</dd>
+            <dt>Line 16: Retrieve attributes from object</dt>
+                <dd>Enter the attribute name to retrieve that attribute, each attribute is seperated by a comma</dd>
+        </dl>
+    </details>
+</body>
